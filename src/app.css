@@ -1,1 +1,45 @@
 @import 'tailwindcss';
+
+@layer utilities {
+	/* Hide scrollbar for Chrome, Safari and Opera */
+	.no-scrollbar::-webkit-scrollbar {
+		display: none;
+	}
+	/* Hide scrollbar for IE, Edge and Firefox */
+	.no-scrollbar {
+		-ms-overflow-style: none; /* IE and Edge */
+		scrollbar-width: none; /* Firefox */
+	}
+}
+
+body {
+	background: #f3f4f6;
+	color: #313131;
+}
+
+.or-divider {
+	color: #e4e4e4;
+	display: flex;
+	align-items: center;
+	width: 100%;
+}
+
+.or-divider::before {
+	background-color: #e4e4e4;
+	content: '';
+	padding: 0.3px 0;
+	margin-right: 15px;
+	flex: 1;
+}
+
+.or-divider::after {
+	background-color: #d8d8d8;
+	content: '';
+	padding: 0.3px 0;
+	margin-left: 15px;
+	flex: 1;
+}
+
+input[type='submit']:hover {
+	cursor: pointer;
+}
